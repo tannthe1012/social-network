@@ -1,0 +1,282 @@
+:root {
+    --hover: #F2F2F2;
+    --focus: #E4E6E9;
+    --trans: 0.2s;
+    --trans-timing: linear;
+    --background-color: white;
+}
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #F0F2F5;
+    position: relative;
+    min-height: 100%;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+}
+
+#create-post {
+  font-size: 18px;  
+  display: block;
+  background-color: var(--background-color);
+  width: 500px;
+  height: auto;
+  padding: 0 15px;
+  margin: auto;
+  border-radius: 8px;
+  border: 1px solid #D8DADF;
+  color: #5B626A;
+  /* visibility: hidden; */
+}
+
+.form-control {
+  width: 100%;
+  display: flex;
+  padding: 10px 0 15px 0;
+  margin: 2px;
+}
+
+.avatar-control {
+    width: 41px;
+    height: 41px;
+  }
+
+
+.avatar {
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 0;
+    max-width: 41px;
+    max-height: 41px;
+}
+
+.status-control {
+    margin: 0 10px;
+    width: 440px;
+    padding: 10px;
+    background-color: #F0F2F5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.status-control > span {
+    padding: 0 10px;   
+}
+
+.option {
+    display: flex;
+    height: 40px;
+    font-size: smaller;
+    padding: 5px 0;
+}
+
+.other-option {
+    width: 30%;
+    display: flex;
+    padding: 15px 5px;
+    align-items: center;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.text-control {
+    margin: 9px 0;
+}
+
+.icon-control {
+    margin: 2px 5px;
+    font-size: 25px;
+}
+  
+.fa-video-camera {
+    color: #E42645;
+}
+
+.fa-file-image-o{
+    color: #41B35D;
+}
+
+.fa-flag {
+    color: #36A6CA;
+}
+
+.fa-tags {
+    color: #36A6CA;
+}
+
+
+#input-post {
+    position: absolute;
+    top: 75px;
+    left: 425px;
+    width: 500px;
+    height: 428px;
+    background-color: var(--background-color);
+    visibility: hidden;
+}
+
+#title {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-bottom:1px solid var(--focus) ;
+}
+
+#title > h2{
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.exit-icon {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    border-radius: 60%;
+    background-color: var(--hover);
+}
+
+.exit-icon::before {
+    position: inherit;
+    top: 5px;
+    left: 8px;
+}
+
+#form-post {
+    max-height: 300px;
+    flex-direction: column;
+}
+
+#content {
+    max-height: 240px;
+}
+.infor {
+    display: flex;
+    flex-direction: row;
+    position: inherit;
+    padding: 10px;
+}
+
+#name {
+    margin: 0;
+}
+#privacy-post {
+    background-color: var(--hover);
+    display: flex;
+    font-size: smaller;
+    border-radius: 10px;
+    padding: 0 5px;
+    max-height: 25px;
+}
+
+.fa-lock {
+    font-size: 15px;
+    margin: 5px 5px;
+}
+
+.privacy-status {
+    margin: 5px 0;
+}
+
+.fa-arrow-down {
+    margin: 7px 0 5px 4px;
+}
+
+.writing-status {
+    max-height: 160px;
+    max-width: 480px;
+    position: relative;
+}
+
+#writing {
+    height: 80px;
+    width: 430px;
+    border: none;
+    margin: 5px 15px;
+    padding: 10px;
+    font-size: larger;
+    border-style: hidden;
+}
+
+.fa-smile-o {
+    position: absolute;
+    right: 10px;
+    margin: 5px 0;
+    padding: 3px 5px;
+    color: var(--hover);
+    bottom: -30px;
+    border-radius: 50%;
+}
+
+.add-utili {
+    display: flex;
+    margin: 35px 10px 10px 8px;
+    padding: 5px;
+    border: 2px solid var(--hover);
+    border-radius: 10px;
+}
+
+.add-title {
+    margin-left: 20px;
+    margin-right: 170px;
+    left: 10px;
+}
+
+.icon-utili > i{
+    padding: 7px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+#upload {
+    margin: 10px;
+}
+
+#upload > input {
+    width: 100%;
+    padding: 10px;
+    background-color: #E4E6EB;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Xử lý hover của create post */
+
+.other-option:hover {
+    background-color: var(--hover);
+    transition: var(--trans);
+    transition-timing-function: var(--trans-timing);
+    cursor: pointer;
+}
+
+.status-control:hover {
+    background-color: var(--focus);
+    transition: var(--trans);
+    transition-timing-function: var(--trans-timing);
+    cursor: pointer;
+}
+
+/* Xử lý hover của input post */
+
+.icon-control:hover {
+    background-color: var(--focus);
+    transition: var(--trans);
+    transition-timing-function: var(--trans-timing);
+    cursor: pointer;
+}
+
+#privacy-post:hover {
+    background-color: var(--focus);
+    transition: var(--trans);
+    transition-timing-function: var(--trans-timing);
+    cursor: pointer;
+}

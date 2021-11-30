@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500&display=swap');
+body {
+  margin: 0;
+  background-color: #f0f2f5;
+  font-family: 'Inter', sans-serif;
+}
+
+.loading_placeholder {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: loadingPlaceholder;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #fbcae37a 8%, #eea4b7 18%, #fbcae37a 33%);
+  background-size: 1000px 104px;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  height: 100%;
+}
+
+@keyframes loadingPlaceholder {
+  0% {
+    background-position: -468px 0
+  }
+
+  100% {
+    background-position: 468px 0
+  }
+}
+
+.custom_box {
+  box-shadow: 0 0 1px 0 #ffb6c1,
+  0 3px 4px -2px #ffb6c1;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 0 1px 0 #ffb6c1,
+  0 3px 4px -2px #ffb6c1;
+  border-radius: 0.5rem;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.avatar_main {
+  height: 3rem;
+  width: 3rem;
+
+  border-radius: 100%;
+  object-fit: cover;
+  background-color: pink;
+  margin-right: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-flexEnd {
+  justify-content: flex-end;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.ml-1 {
+  margin-left: 8px;
+}
+
+.mr-1 {
+  margin-right: 8px;
+}
+
+.imgPost_main {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.breakContent {
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.icon_btn_custom:hover {
+  background-color: pink;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reactionIcon {
+  width: calc(16% - 5px);
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.reactionIcon:hover {
+  transform: scale(1.5);
+}
+
+.reactionContainer {
+  position: absolute;
+  width: 300px;
+  left: 0;
+  top: -40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 50px;
+  display: none;
+}
+
+#likePost:hover .reactionContainer {
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.secondary-text {
+  color: #65676b;
+}
+
+.blue-color {
+  color: blue;
+}
+
+.smallIcon {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  min-width: 40px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+a[is="router-link"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+.progress-5 {
+  width: 80px;
+  height: 40px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  padding: 3px;
+  background: repeating-linear-gradient(90deg, currentColor 0 10px, #0000 0 15px) left/0% 100% no-repeat content-box content-box;
+  position: relative;
+  animation: p5 2s infinite steps(6);
+}
+
+.progress-5::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: 100%;
+  width: 10px;
+  background:
+  linear-gradient(#0000 calc(50% - 7px), currentColor 0 calc(50% - 5px),
+  #0000 0 calc(50% + 5px), currentColor 0 calc(50% + 7px), #0000 0) left /100% 100%,
+  linear-gradient(currentColor calc(50% - 5px), #0000 0 calc(50% + 5px), currentColor 0) left /2px 100%,
+  linear-gradient(#0000 calc(50% - 5px), currentColor 0 calc(50% + 5px), #0000 0) right/2px 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes p5 {
+  100% {
+    background-size: 120% 100%
+  }
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+.mainBtnCustom {
+  background-color: pink;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mainBtnCustom:disabled {
+  background-color: #f0f2f5;
+}
+.redBg {
+  background-color: red;
+}
+
+.blueBg {
+  background-color: #1b74e4;
+}
+
+.display-none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.displayContent {
+  display: contents;
+}
+
+.pointer { 
+  cursor: pointer;
+}
+
+.scrollAuto {
+  overflow: auto;
+}
+
+.bgNone {
+  background-color: inherit;
+}
+
+.smallAvatar {
+  height: 2.2rem;
+  width: 2.2rem;
+
+  border-radius: 100%;
+  object-fit: cover;
+  background-color: pink;
+  margin-right: 10px;
+}
+
+.inputComment {
+  border-radius: 50px;
+  background-color: #ffc0cb66;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.commentContent {
+  background-color: #f0f2f5;
+  padding: 8px;
+  border-radius: 10px;
+  word-break: break-word;
+}

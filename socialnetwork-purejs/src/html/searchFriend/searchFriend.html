@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 682px;
+        min-height: 128px;
+        background-color: #fcfcfc;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+
+    .text-control {
+        margin: 0;
+    }
+
+    .link-control {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .find-out {
+        display: flex;
+        position: relative;
+        padding: 15px 0;
+        margin: 2px 0;
+        border-bottom: 1px solid #E4E6E9;
+    }
+
+    .image-contain {
+        height: 62px;
+        width: 62px;
+        margin-right: 10px;
+    }
+
+    .avatar {
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+    }
+
+    .infor {
+        margin: 5px 0;
+        line-height: 25px;
+    }
+
+    .icon-contain {
+
+        position: absolute;
+        right: 0;
+        top: 31px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+        transition-timing-function: linear;
+        background-color: #f2f2f2;
+    }
+
+    .icon-control {
+        padding: 15px;
+    }
+
+
+    .icon-control > .fa-plus {
+        font-size: 10px;
+        position: absolute;
+    }
+
+    .icon-contain:hover {
+        background-color: #E4E6E9;
+    }
+
+    .extend {
+        background-color: #dee4eb;
+        padding: 5px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.2s;
+        transition-timing-function: linear;
+    }
+    .extend:hover {
+        background-color: #d5dce4;
+    }
+</style>
+<div class="container">
+    <h2 class="title text-control">Mọi người</h2>
+    <div class="find-out">
+        <a href="" class="image-contain link-control"><img src="http://file.vforum.vn/hinh/2018/03/hinh-anh-hinh-nen-messi-full-hd-dep-nhat-the-gioi4.jpg" alt="" class="avatar"/></a>
+        <div class="infor">
+            <a href="" class="link-control"><p class="name text-control">Lê Sơn</p></a>
+            <p class="relation text-control">100 bạn chung</p>
+        </div>
+        <div class="icon-contain">
+            <div class="icon-control">
+                <i class="fa fa-user-o fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="extend">
+        <h4 class="text-control">Xem thêm</h4>
+    </div>
+</div>
+</html>
